@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Spel 3 Whack-A-Mole/1.0.0": {
+        "runtime": {
+          "Spel 3 Whack-A-Mole.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Spel 3 Whack-A-Mole/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -282,8 +282,8 @@ namespace Spel_3_Whack_A_Mole
                 score = iScore,
                 miss = iMisKlik
             };
-
-            string fileName = @"C:\\Users\\Nawid\\AppData\\Local\\WeatherForecast.json";
+            string appdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            string fileName = $@"C:{appdata}\\Local\\WeatherForecast.json";
             string jsonString = JsonSerializer.Serialize(JsonScore);
             System.IO.File.WriteAllText(fileName, jsonString);
             Console.WriteLine(File.ReadAllText(fileName));

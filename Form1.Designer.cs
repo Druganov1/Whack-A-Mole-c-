@@ -222,6 +222,7 @@
             this.Controls.Add(this.pb_Mole3);
             this.Controls.Add(this.pb_Mole2);
             this.Controls.Add(this.pb_Mole1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Form1";

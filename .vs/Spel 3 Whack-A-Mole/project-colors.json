@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "a28b4897-ebfa-4a65-9e73-807d846c11c7": {
+      "ProjectGuid": "a28b4897-ebfa-4a65-9e73-807d846c11c7",
+      "DisplayName": "Spel 3 Whack-A-Mole",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

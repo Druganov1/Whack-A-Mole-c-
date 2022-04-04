@@ -245,7 +245,16 @@ namespace Spel_3_Whack_A_Mole
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            RandomMole();
+            
+            if(iMisKlik >= 3)
+            {
+                this.BackgroundImage = Properties.Resources.Game_over;
+                timer1.Enabled = false;
+                timer1.Stop();
+            } else
+            {
+                RandomMole();
+            }
         }
 
         private void btn_start_Click(object sender, EventArgs e)

@@ -16,3 +16,21 @@ C:\Users\Nawid\OneDrive - COG\PROJ AGILE GAME\Opdrachten\Spel 3 Whack-A-Mole\obj
 C:\Users\Nawid\OneDrive - COG\PROJ AGILE GAME\Opdrachten\Spel 3 Whack-A-Mole\obj\Debug\net6.0-windows\ref\Spel 3 Whack-A-Mole.dll
 C:\Users\Nawid\OneDrive - COG\PROJ AGILE GAME\Opdrachten\Spel 3 Whack-A-Mole\obj\Debug\net6.0-windows\Spel 3 Whack-A-Mole.pdb
 C:\Users\Nawid\OneDrive - COG\PROJ AGILE GAME\Opdrachten\Spel 3 Whack-A-Mole\obj\Debug\net6.0-windows\Spel 3 Whack-A-Mole.genruntimeconfig.cache
+C:\Users\Nawid\Documents\GitHub\Whack-A-Mole-c-\bin\Debug\net6.0-windows\Spel 3 Whack-A-Mole.exe
+C:\Users\Nawid\Documents\GitHub\Whack-A-Mole-c-\bin\Debug\net6.0-windows\Spel 3 Whack-A-Mole.deps.json
+C:\Users\Nawid\Documents\GitHub\Whack-A-Mole-c-\bin\Debug\net6.0-windows\Spel 3 Whack-A-Mole.runtimeconfig.json
+C:\Users\Nawid\Documents\GitHub\Whack-A-Mole-c-\bin\Debug\net6.0-windows\Spel 3 Whack-A-Mole.dll
+C:\Users\Nawid\Documents\GitHub\Whack-A-Mole-c-\bin\Debug\net6.0-windows\ref\Spel 3 Whack-A-Mole.dll
+C:\Users\Nawid\Documents\GitHub\Whack-A-Mole-c-\bin\Debug\net6.0-windows\Spel 3 Whack-A-Mole.pdb
+C:\Users\Nawid\Documents\GitHub\Whack-A-Mole-c-\obj\Debug\net6.0-windows\Spel 3 Whack-A-Mole.csproj.AssemblyReference.cache
+C:\Users\Nawid\Documents\GitHub\Whack-A-Mole-c-\obj\Debug\net6.0-windows\Spel_3_Whack_A_Mole.Form1.resources
+C:\Users\Nawid\Documents\GitHub\Whack-A-Mole-c-\obj\Debug\net6.0-windows\Spel_3_Whack_A_Mole.Properties.Resources.resources
+C:\Users\Nawid\Documents\GitHub\Whack-A-Mole-c-\obj\Debug\net6.0-windows\Spel 3 Whack-A-Mole.csproj.GenerateResource.cache
+C:\Users\Nawid\Documents\GitHub\Whack-A-Mole-c-\obj\Debug\net6.0-windows\Spel 3 Whack-A-Mole.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nawid\Documents\GitHub\Whack-A-Mole-c-\obj\Debug\net6.0-windows\Spel 3 Whack-A-Mole.AssemblyInfoInputs.cache
+C:\Users\Nawid\Documents\GitHub\Whack-A-Mole-c-\obj\Debug\net6.0-windows\Spel 3 Whack-A-Mole.AssemblyInfo.cs
+C:\Users\Nawid\Documents\GitHub\Whack-A-Mole-c-\obj\Debug\net6.0-windows\Spel 3 Whack-A-Mole.csproj.CoreCompileInputs.cache
+C:\Users\Nawid\Documents\GitHub\Whack-A-Mole-c-\obj\Debug\net6.0-windows\Spel 3 Whack-A-Mole.dll
+C:\Users\Nawid\Documents\GitHub\Whack-A-Mole-c-\obj\Debug\net6.0-windows\ref\Spel 3 Whack-A-Mole.dll
+C:\Users\Nawid\Documents\GitHub\Whack-A-Mole-c-\obj\Debug\net6.0-windows\Spel 3 Whack-A-Mole.pdb
+C:\Users\Nawid\Documents\GitHub\Whack-A-Mole-c-\obj\Debug\net6.0-windows\Spel 3 Whack-A-Mole.genruntimeconfig.cache

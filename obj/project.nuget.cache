@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Nhod1T7cj7+HvQr8nqIjY2h6IIxrq2/rNtDfYy2AY6dcuq93ZBl4PX75GO2UCyFlvaxKbWWdFHIgD0oClKQzOw==",
+  "dgSpecHash": "SnhcpC3KOBPB2qzyu36lKkFSs1LAiyAapja1XeMB8BpEK+FrEaAOQpeEnh2F7oV/rg8+naLouRi7hrDuRFQFAw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Nawid\\Documents\\GitHub\\Whack-A-Mole-c-\\Spel 3 Whack-A-Mole.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Nawid\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

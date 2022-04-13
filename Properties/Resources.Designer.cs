@@ -71,6 +71,15 @@ namespace Spel_3_Whack_A_Mole.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream background_music {
+            get {
+                return ResourceManager.GetStream("background_music", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
         internal static System.Drawing.Icon cursor {
@@ -97,6 +106,24 @@ namespace Spel_3_Whack_A_Mole.Properties {
             get {
                 object obj = ResourceManager.GetObject("Game_over", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream hit_sound {
+            get {
+                return ResourceManager.GetStream("hit_sound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream miss_sound {
+            get {
+                return ResourceManager.GetStream("miss_sound", resourceCulture);
             }
         }
     }

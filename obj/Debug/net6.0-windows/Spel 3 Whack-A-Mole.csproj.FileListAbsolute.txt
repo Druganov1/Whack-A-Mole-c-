@@ -34,3 +34,5 @@ C:\Users\Nawid\Documents\GitHub\Whack-A-Mole-c-\obj\Debug\net6.0-windows\Spel 3 
 C:\Users\Nawid\Documents\GitHub\Whack-A-Mole-c-\obj\Debug\net6.0-windows\ref\Spel 3 Whack-A-Mole.dll
 C:\Users\Nawid\Documents\GitHub\Whack-A-Mole-c-\obj\Debug\net6.0-windows\Spel 3 Whack-A-Mole.pdb
 C:\Users\Nawid\Documents\GitHub\Whack-A-Mole-c-\obj\Debug\net6.0-windows\Spel 3 Whack-A-Mole.genruntimeconfig.cache
+C:\Users\Nawid\Documents\GitHub\Whack-A-Mole-c-\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\Nawid\Documents\GitHub\Whack-A-Mole-c-\obj\Debug\net6.0-windows\Spel 3 Whack-A-Mole.csproj.CopyComplete

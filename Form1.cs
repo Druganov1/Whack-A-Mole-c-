@@ -2,7 +2,12 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Text.Json.Serialization;
+using System.Collections.Generic;
+using Newtonsoft.Json;
+using System.Media;
+using System.Text;
+using System.Runtime.InteropServices;
+using System.Windows;
 
 
 namespace Spel_3_Whack_A_Mole
@@ -32,11 +37,19 @@ namespace Spel_3_Whack_A_Mole
         public int iIntervalTimer = 5000;
         public int iMisKlik;
         public Boolean isProgramRunning;
+        PictureBox[] pb_Array = new PictureBox[7];
+        SoundPlayer HitSound = new SoundPlayer(Properties.Resources.hit_sound);
+        SoundPlayer MissSound = new SoundPlayer(Properties.Resources.miss_sound);
+        System.Media.SoundPlayer sp = new System.Media.SoundPlayer(Properties.Resources.background_music);
+        
+
+
 
         public void RandomMole()
         {
+            
             Random rand = new Random();
-            PictureBox[] pb_Array = new PictureBox[7];
+            
             pb_Array[0] = pb_Mole1;
             pb_Array[1] = pb_Mole2;
             pb_Array[2] = pb_Mole3;
@@ -63,6 +76,17 @@ namespace Spel_3_Whack_A_Mole
 
         }
 
+        public void DisableMoles()
+        {
+
+            foreach (var Element in pb_Array)
+            {
+                //Element.Enabled = false; Niet nodig aangezien als we dit aanzetten, we niet meer de miskliks kunnen toetsen
+                Element.Visible = false;
+                Element.Image = Properties.Resources.alive;
+            }
+        }
+
         
 
         private async void pb_Mole2_Click(object sender, EventArgs e)
@@ -71,6 +95,7 @@ namespace Spel_3_Whack_A_Mole
             if (iCorrectMole == 1)
             {
                 iScore++;
+                HitSound.Play();
 
 
 
@@ -81,8 +106,9 @@ namespace Spel_3_Whack_A_Mole
                 Console.WriteLine("Continuing thread");
 
                 RandomMole();
-                iIntervalTimer -= 50;
-                timer1.Interval = iIntervalTimer;
+                UpdateGameTimer();
+                await Task.Delay(200);
+                sp.Play();
             } else
             {
                 iMisKlik++;
@@ -95,6 +121,7 @@ namespace Spel_3_Whack_A_Mole
             if (iCorrectMole == 0)
             {
                 iScore++;
+                HitSound.Play();
 
 
 
@@ -105,8 +132,9 @@ namespace Spel_3_Whack_A_Mole
                 Console.WriteLine("Continuing thread");
 
                 RandomMole();
-                iIntervalTimer -= 50;
-                timer1.Interval = iIntervalTimer;
+                UpdateGameTimer();
+                await Task.Delay(200);
+                sp.Play();
             }
             else
             {
@@ -119,18 +147,20 @@ namespace Spel_3_Whack_A_Mole
             if (iCorrectMole == 6)
             {
                 iScore++;
+                HitSound.Play();
 
 
 
-
+                
                 pb_Mole7.Image = Properties.Resources.dead;
                 Console.WriteLine("Suspending thread");
                 await Task.Delay(500);
                 Console.WriteLine("Continuing thread");
 
                 RandomMole();
-                iIntervalTimer -= 50;
-                timer1.Interval = iIntervalTimer;
+                UpdateGameTimer();
+                await Task.Delay(200);
+                sp.Play();
             }
             else
             {
@@ -143,18 +173,20 @@ namespace Spel_3_Whack_A_Mole
             if (iCorrectMole == 2)
             {
                 iScore++;
+                HitSound.Play();
 
 
 
-
+               
                 pb_Mole3.Image = Properties.Resources.dead;
                 Console.WriteLine("Suspending thread");
                 await Task.Delay(500);
                 Console.WriteLine("Continuing thread");
 
                 RandomMole();
-                iIntervalTimer -= 50;
-                timer1.Interval = iIntervalTimer;
+                UpdateGameTimer();
+                await Task.Delay(200);
+                sp.Play();
             }
             else
             {
@@ -167,18 +199,19 @@ namespace Spel_3_Whack_A_Mole
             if (iCorrectMole == 3)
             {
                 iScore++;
+                HitSound.Play();
 
 
-
-
+                
                 pb_Mole4.Image = Properties.Resources.dead;
                 Console.WriteLine("Suspending thread");
                 await Task.Delay(500);
                 Console.WriteLine("Continuing thread");
 
                 RandomMole();
-                iIntervalTimer -= 50;
-                timer1.Interval = iIntervalTimer;
+                UpdateGameTimer();
+                await Task.Delay(200);
+                sp.Play();
             }
             else
             {
@@ -191,18 +224,19 @@ namespace Spel_3_Whack_A_Mole
             if (iCorrectMole == 5)
             {
                 iScore++;
+                HitSound.Play();
 
 
-
-
+                
                 pb_Mole6.Image = Properties.Resources.dead;
                 Console.WriteLine("Suspending thread");
                 await Task.Delay(500);
                 Console.WriteLine("Continuing thread");
 
                 RandomMole();
-                iIntervalTimer -= 50;
-                timer1.Interval = iIntervalTimer;
+                UpdateGameTimer();
+                await Task.Delay(200);
+                sp.Play();
             }
             else
             {
@@ -215,18 +249,19 @@ namespace Spel_3_Whack_A_Mole
             if (iCorrectMole == 4)
             {
                 iScore++;
+                HitSound.Play();
 
 
-
-
+                
                 pb_Mole5.Image = Properties.Resources.dead;
                 Console.WriteLine("Suspending thread");
                 await Task.Delay(500);
                 Console.WriteLine("Continuing thread");
 
                 RandomMole();
-                iIntervalTimer -= 50;
-                timer1.Interval = iIntervalTimer;
+                UpdateGameTimer();
+                await Task.Delay(200);
+                sp.Play();
             }
             else
             {
@@ -238,9 +273,25 @@ namespace Spel_3_Whack_A_Mole
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            MessageBox.Show("Welkom bij onze versie van Whack-A-Mole, in deze game is nauwkeurigheid en snelheid belangrijk. Het werkt alsvolgt: Als jij op de start knop klinkt dan gaan er om de 5 seconden mollen verschijnen, het is aan jou de taak om deze te slaan met je hamer. Om de 5 punten gaat het 1 seconde sneller. Raak je mis? dan gaat er een punt af, 3 miskliks = game over");
+
             Cursor cur = new Cursor(Properties.Resources.cursor.Handle);
             this.Cursor = cur;
             
+        }
+
+        public void UpdateGameTimer()
+        {
+            if(iScore == 5 || iScore == 10 || iScore == 15 || iScore == 20 || iScore == 25)
+            {
+                iIntervalTimer -= 1000;
+                timer1.Interval = iIntervalTimer;
+            } else if (iScore == 30)
+            {
+                timer1.Stop();
+                MessageBox.Show("Gefeliciteerd, je hebt de maximale haalbare score gehaald!");
+                Environment.Exit(0);
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -248,9 +299,12 @@ namespace Spel_3_Whack_A_Mole
             
             if(iMisKlik >= 3)
             {
+                DisableMoles();
                 this.BackgroundImage = Properties.Resources.Game_over;
                 timer1.Enabled = false;
                 timer1.Stop();
+                isProgramRunning = false;
+                sp.Stop();
             } else
             {
                 RandomMole();
@@ -262,31 +316,67 @@ namespace Spel_3_Whack_A_Mole
             timer1.Enabled = true;
             isProgramRunning = true;
 
+
+
+
+
+
+
+
         }
         
 
-        private void Form1_MouseClick(object sender, MouseEventArgs e)
+        private async void Form1_MouseClick(object sender, MouseEventArgs e)
         {
             if (isProgramRunning)
             {
+                MissSound.Play();
                 iMisKlik++;
                 txt_MisKlik.Text = iMisKlik.ToString();
+                await Task.Delay(700);
+                sp.Play();
             }
+        }
+
+        public class highScore
+
+        {
+
+            public string Date { get; set; }
+
+            public int Score { get; set; }
+
+            public int Misklik { get; set; }
+
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            var JsonScore = new JsonScore
+
+            var appdata = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+            var filePath = Path.Combine(appdata, "scores-game.json");
+            // Read existing json data
+            var jsonData = System.IO.File.ReadAllText(filePath);
+            
+            var saveScore = JsonConvert.DeserializeObject<List<highScore>>(jsonData)
+                                  ?? new List<highScore>();
+
+            
+            saveScore.Add(new highScore()
             {
                 Date = DateTime.UtcNow.ToString("dd-MM-yyyy HH:mm:ss"),
-                score = iScore,
-                miss = iMisKlik
-            };
-            string appdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            string fileName = $@"C:{appdata}\\Local\\WeatherForecast.json";
-            string jsonString = JsonSerializer.Serialize(JsonScore);
-            System.IO.File.WriteAllText(fileName, jsonString);
-            Console.WriteLine(File.ReadAllText(fileName));
+                Score = iScore,
+                Misklik = iMisKlik
+
+
+            });
+
+
+            
+            jsonData = JsonConvert.SerializeObject(saveScore);
+            System.IO.File.WriteAllText(filePath, jsonData);
+
+
 
 
         }
